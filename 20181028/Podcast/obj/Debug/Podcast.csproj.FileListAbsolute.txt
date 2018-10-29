@@ -1,0 +1,19 @@
+C:\Users\kardo\source\repos\Podcast\Podcast\bin\Debug\Podcast.exe.config
+C:\Users\kardo\source\repos\Podcast\Podcast\bin\Debug\Podcast.exe
+C:\Users\kardo\source\repos\Podcast\Podcast\bin\Debug\Podcast.pdb
+C:\Users\kardo\source\repos\Podcast\Podcast\obj\Debug\Podcast.csprojAssemblyReference.cache
+C:\Users\kardo\source\repos\Podcast\Podcast\obj\Debug\Podcast.Form1.resources
+C:\Users\kardo\source\repos\Podcast\Podcast\obj\Debug\Podcast.Properties.Resources.resources
+C:\Users\kardo\source\repos\Podcast\Podcast\obj\Debug\Podcast.csproj.GenerateResource.cache
+C:\Users\kardo\source\repos\Podcast\Podcast\obj\Debug\Podcast.csproj.CoreCompileInputs.cache
+C:\Users\kardo\source\repos\Podcast\Podcast\obj\Debug\Podcast.exe
+C:\Users\kardo\source\repos\Podcast\Podcast\obj\Debug\Podcast.pdb
+C:\Users\Xing\Google Drive\My Documents\ORU\Termin 3\Del2 Objektorienterad programmering med C#\Projekt\20181028\Podcast\bin\Debug\Podcast.exe.config
+C:\Users\Xing\Google Drive\My Documents\ORU\Termin 3\Del2 Objektorienterad programmering med C#\Projekt\20181028\Podcast\bin\Debug\Podcast.exe
+C:\Users\Xing\Google Drive\My Documents\ORU\Termin 3\Del2 Objektorienterad programmering med C#\Projekt\20181028\Podcast\bin\Debug\Podcast.pdb
+C:\Users\Xing\Google Drive\My Documents\ORU\Termin 3\Del2 Objektorienterad programmering med C#\Projekt\20181028\Podcast\obj\Debug\Podcast.csprojResolveAssemblyReference.cache
+C:\Users\Xing\Google Drive\My Documents\ORU\Termin 3\Del2 Objektorienterad programmering med C#\Projekt\20181028\Podcast\obj\Debug\Podcast.Form1.resources
+C:\Users\Xing\Google Drive\My Documents\ORU\Termin 3\Del2 Objektorienterad programmering med C#\Projekt\20181028\Podcast\obj\Debug\Podcast.Properties.Resources.resources
+C:\Users\Xing\Google Drive\My Documents\ORU\Termin 3\Del2 Objektorienterad programmering med C#\Projekt\20181028\Podcast\obj\Debug\Podcast.csproj.GenerateResource.Cache
+C:\Users\Xing\Google Drive\My Documents\ORU\Termin 3\Del2 Objektorienterad programmering med C#\Projekt\20181028\Podcast\obj\Debug\Podcast.exe
+C:\Users\Xing\Google Drive\My Documents\ORU\Termin 3\Del2 Objektorienterad programmering med C#\Projekt\20181028\Podcast\obj\Debug\Podcast.pdb
