@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Podcast.Logic
 {
@@ -64,6 +65,20 @@ namespace Podcast.Logic
         public List<Kategori> fillKategori()
         {
             return KategoriDB.GetKategorier();
+        }
+
+        public bool NamnExistInList(string namn)
+        {
+            var kategori = List.FirstOrDefault(i => i.Namn == namn);
+            if (kategori != null)
+            {
+                MessageBox.Show("Kategori finns redan i listan. Du kan ändra det genom att klicka på det i listan, göra ändringar och klicka på Ändra");
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

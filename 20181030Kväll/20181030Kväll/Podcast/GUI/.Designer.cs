@@ -56,30 +56,30 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 457);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(8, 315);
+            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 29);
+            this.label1.Size = new System.Drawing.Size(46, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "URL:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(457, 448);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(294, 309);
+            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(248, 29);
+            this.label2.Size = new System.Drawing.Size(165, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Uppdateringsfrekvens";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(767, 448);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(493, 309);
+            this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 29);
+            this.label3.Size = new System.Drawing.Size(68, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "Kategori";
             // 
@@ -90,27 +90,29 @@
             "5",
             "10",
             "15"});
-            this.cbFrekvens.Location = new System.Drawing.Point(453, 484);
-            this.cbFrekvens.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.cbFrekvens.Location = new System.Drawing.Point(291, 334);
+            this.cbFrekvens.Margin = new System.Windows.Forms.Padding(1);
             this.cbFrekvens.Name = "cbFrekvens";
-            this.cbFrekvens.Size = new System.Drawing.Size(242, 37);
+            this.cbFrekvens.Size = new System.Drawing.Size(157, 28);
             this.cbFrekvens.TabIndex = 4;
+            this.cbFrekvens.Tag = "Uppdateringsfrekvens";
             // 
             // cbKategori
             // 
             this.cbKategori.FormattingEnabled = true;
-            this.cbKategori.Location = new System.Drawing.Point(759, 489);
-            this.cbKategori.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.cbKategori.Location = new System.Drawing.Point(488, 337);
+            this.cbKategori.Margin = new System.Windows.Forms.Padding(1);
             this.cbKategori.Name = "cbKategori";
-            this.cbKategori.Size = new System.Drawing.Size(318, 37);
+            this.cbKategori.Size = new System.Drawing.Size(206, 28);
             this.cbKategori.TabIndex = 5;
+            this.cbKategori.Tag = "Kategori";
             // 
             // btnNyFeed
             // 
-            this.btnNyFeed.Location = new System.Drawing.Point(16, 542);
-            this.btnNyFeed.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnNyFeed.Location = new System.Drawing.Point(10, 374);
+            this.btnNyFeed.Margin = new System.Windows.Forms.Padding(1);
             this.btnNyFeed.Name = "btnNyFeed";
-            this.btnNyFeed.Size = new System.Drawing.Size(196, 49);
+            this.btnNyFeed.Size = new System.Drawing.Size(126, 34);
             this.btnNyFeed.TabIndex = 6;
             this.btnNyFeed.Text = "Ny..";
             this.btnNyFeed.UseVisualStyleBackColor = true;
@@ -118,10 +120,10 @@
             // 
             // btnSparaFeed
             // 
-            this.btnSparaFeed.Location = new System.Drawing.Point(453, 542);
-            this.btnSparaFeed.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnSparaFeed.Location = new System.Drawing.Point(291, 374);
+            this.btnSparaFeed.Margin = new System.Windows.Forms.Padding(1);
             this.btnSparaFeed.Name = "btnSparaFeed";
-            this.btnSparaFeed.Size = new System.Drawing.Size(196, 49);
+            this.btnSparaFeed.Size = new System.Drawing.Size(126, 34);
             this.btnSparaFeed.TabIndex = 7;
             this.btnSparaFeed.Text = "Ändra";
             this.btnSparaFeed.UseVisualStyleBackColor = true;
@@ -129,10 +131,10 @@
             // 
             // btnTaBortFeed
             // 
-            this.btnTaBortFeed.Location = new System.Drawing.Point(759, 542);
-            this.btnTaBortFeed.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnTaBortFeed.Location = new System.Drawing.Point(488, 374);
+            this.btnTaBortFeed.Margin = new System.Windows.Forms.Padding(1);
             this.btnTaBortFeed.Name = "btnTaBortFeed";
-            this.btnTaBortFeed.Size = new System.Drawing.Size(196, 49);
+            this.btnTaBortFeed.Size = new System.Drawing.Size(126, 34);
             this.btnTaBortFeed.TabIndex = 8;
             this.btnTaBortFeed.Text = "Ta Bort";
             this.btnTaBortFeed.UseVisualStyleBackColor = true;
@@ -140,38 +142,39 @@
             // 
             // tbUrl
             // 
-            this.tbUrl.Location = new System.Drawing.Point(16, 492);
-            this.tbUrl.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.tbUrl.Location = new System.Drawing.Point(10, 339);
+            this.tbUrl.Margin = new System.Windows.Forms.Padding(1);
             this.tbUrl.Name = "tbUrl";
-            this.tbUrl.Size = new System.Drawing.Size(405, 35);
+            this.tbUrl.Size = new System.Drawing.Size(262, 26);
             this.tbUrl.TabIndex = 9;
+            this.tbUrl.Tag = "URL";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 610);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(8, 421);
+            this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 29);
+            this.label4.Size = new System.Drawing.Size(51, 20);
             this.label4.TabIndex = 11;
             this.label4.Text = "label4";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1115, 17);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(717, 12);
+            this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(126, 29);
+            this.label5.Size = new System.Drawing.Size(82, 20);
             this.label5.TabIndex = 12;
             this.label5.Text = "Kategorier";
             // 
             // btnNyKategori
             // 
-            this.btnNyKategori.Location = new System.Drawing.Point(1122, 479);
-            this.btnNyKategori.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnNyKategori.Location = new System.Drawing.Point(721, 330);
+            this.btnNyKategori.Margin = new System.Windows.Forms.Padding(1);
             this.btnNyKategori.Name = "btnNyKategori";
-            this.btnNyKategori.Size = new System.Drawing.Size(196, 49);
+            this.btnNyKategori.Size = new System.Drawing.Size(126, 34);
             this.btnNyKategori.TabIndex = 14;
             this.btnNyKategori.Text = "Ny..";
             this.btnNyKategori.UseVisualStyleBackColor = true;
@@ -179,10 +182,10 @@
             // 
             // btnAndraKategori
             // 
-            this.btnAndraKategori.Location = new System.Drawing.Point(1378, 477);
-            this.btnAndraKategori.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnAndraKategori.Location = new System.Drawing.Point(886, 329);
+            this.btnAndraKategori.Margin = new System.Windows.Forms.Padding(1);
             this.btnAndraKategori.Name = "btnAndraKategori";
-            this.btnAndraKategori.Size = new System.Drawing.Size(196, 49);
+            this.btnAndraKategori.Size = new System.Drawing.Size(126, 34);
             this.btnAndraKategori.TabIndex = 15;
             this.btnAndraKategori.Text = "Ändra";
             this.btnAndraKategori.UseVisualStyleBackColor = true;
@@ -190,10 +193,10 @@
             // 
             // btnTaBortKategori
             // 
-            this.btnTaBortKategori.Location = new System.Drawing.Point(1630, 477);
-            this.btnTaBortKategori.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnTaBortKategori.Location = new System.Drawing.Point(1048, 329);
+            this.btnTaBortKategori.Margin = new System.Windows.Forms.Padding(1);
             this.btnTaBortKategori.Name = "btnTaBortKategori";
-            this.btnTaBortKategori.Size = new System.Drawing.Size(196, 49);
+            this.btnTaBortKategori.Size = new System.Drawing.Size(126, 34);
             this.btnTaBortKategori.TabIndex = 16;
             this.btnTaBortKategori.Text = "Ta Bort";
             this.btnTaBortKategori.UseVisualStyleBackColor = true;
@@ -201,18 +204,19 @@
             // 
             // tbKategori
             // 
-            this.tbKategori.Location = new System.Drawing.Point(1122, 416);
-            this.tbKategori.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.tbKategori.Location = new System.Drawing.Point(721, 287);
+            this.tbKategori.Margin = new System.Windows.Forms.Padding(1);
             this.tbKategori.Name = "tbKategori";
-            this.tbKategori.Size = new System.Drawing.Size(706, 35);
+            this.tbKategori.Size = new System.Drawing.Size(455, 26);
             this.tbKategori.TabIndex = 17;
+            this.tbKategori.Tag = "Kategori Namn";
             // 
             // lvBeskrivning
             // 
-            this.lvBeskrivning.Location = new System.Drawing.Point(1122, 566);
-            this.lvBeskrivning.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.lvBeskrivning.Location = new System.Drawing.Point(721, 390);
+            this.lvBeskrivning.Margin = new System.Windows.Forms.Padding(1);
             this.lvBeskrivning.Name = "lvBeskrivning";
-            this.lvBeskrivning.Size = new System.Drawing.Size(716, 258);
+            this.lvBeskrivning.Size = new System.Drawing.Size(462, 179);
             this.lvBeskrivning.TabIndex = 18;
             this.lvBeskrivning.UseCompatibleStateImageBehavior = false;
             this.lvBeskrivning.View = System.Windows.Forms.View.List;
@@ -221,11 +225,11 @@
             // lbAvsnitt
             // 
             this.lbAvsnitt.FormattingEnabled = true;
-            this.lbAvsnitt.ItemHeight = 29;
-            this.lbAvsnitt.Location = new System.Drawing.Point(16, 645);
-            this.lbAvsnitt.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.lbAvsnitt.ItemHeight = 20;
+            this.lbAvsnitt.Location = new System.Drawing.Point(10, 445);
+            this.lbAvsnitt.Margin = new System.Windows.Forms.Padding(1);
             this.lbAvsnitt.Name = "lbAvsnitt";
-            this.lbAvsnitt.Size = new System.Drawing.Size(1062, 178);
+            this.lbAvsnitt.Size = new System.Drawing.Size(684, 124);
             this.lbAvsnitt.TabIndex = 19;
             this.lbAvsnitt.SelectedIndexChanged += new System.EventHandler(this.selectAvsnitt);
             // 
@@ -236,10 +240,10 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
-            this.lvFeed.Location = new System.Drawing.Point(16, 29);
-            this.lvFeed.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.lvFeed.Location = new System.Drawing.Point(10, 20);
+            this.lvFeed.Margin = new System.Windows.Forms.Padding(1);
             this.lvFeed.Name = "lvFeed";
-            this.lvFeed.Size = new System.Drawing.Size(1073, 381);
+            this.lvFeed.Size = new System.Drawing.Size(691, 264);
             this.lvFeed.TabIndex = 20;
             this.lvFeed.UseCompatibleStateImageBehavior = false;
             this.lvFeed.View = System.Windows.Forms.View.Details;
@@ -268,19 +272,19 @@
             // lbKategori
             // 
             this.lbKategori.FormattingEnabled = true;
-            this.lbKategori.ItemHeight = 29;
-            this.lbKategori.Location = new System.Drawing.Point(1122, 49);
-            this.lbKategori.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.lbKategori.ItemHeight = 20;
+            this.lbKategori.Location = new System.Drawing.Point(721, 34);
+            this.lbKategori.Margin = new System.Windows.Forms.Padding(1);
             this.lbKategori.Name = "lbKategori";
-            this.lbKategori.Size = new System.Drawing.Size(716, 352);
+            this.lbKategori.Size = new System.Drawing.Size(462, 244);
             this.lbKategori.TabIndex = 21;
             this.lbKategori.SelectedIndexChanged += new System.EventHandler(this.selectKategoriItem);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1892, 857);
+            this.ClientSize = new System.Drawing.Size(1216, 591);
             this.Controls.Add(this.lbKategori);
             this.Controls.Add(this.lvFeed);
             this.Controls.Add(this.lbAvsnitt);
@@ -300,7 +304,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

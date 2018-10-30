@@ -14,7 +14,7 @@ using System.ServiceModel.Description;
 using System.ServiceModel.Web;
 using System.ServiceModel.Syndication;
 using Podcast.Data;
-
+using Podcast.Validation;
 
 
 namespace Podcast
@@ -48,32 +48,15 @@ namespace Podcast
 
             lvFeed.FullRowSelect = true;
             refreshRssTimer();
-
-
-
-            /*  XmlReader reader = XmlReader.Create("http://mandag.libsyn.com/rss");
-            SyndicationFeed feed = SyndicationFeed.Load(reader);
-            reader.Close();
-
-            foreach (SyndicationItem item in feed.Items)
-            {
-                String subject = item.Title.Text;
-                String summary = item.Summary.Text;
-
-            } */
-
+            
         }
 
         private void btnNyKategori_Click(object sender, EventArgs e)
         {
-            var KategoriNamn = tbKategori.Text;
+            var KategoriNamn = tbKategori.Text.Substring(0, 1).ToUpper() + tbKategori.Text.Substring(1).ToLower();
             Kategori kategori = new Kategori(KategoriNamn);
-
-            if (String.IsNullOrEmpty(KategoriNamn))
-            {
-                Console.WriteLine("wow");
-            }
-            else
+            kategoriList.NamnExistInList(KategoriNamn);
+            if (KategoriInputValid()&&!kategoriList.NamnExistInList(KategoriNamn))
             {
                 kategoriList.Add(kategori);
                 tbKategori.Clear();   
@@ -117,16 +100,11 @@ namespace Podcast
             var kategoriNamnOld = lbKategori.SelectedItem.ToString();
             var kategoriNamnNew = tbKategori.Text;
 
-            if (String.IsNullOrEmpty(kategoriNamnNew))
-            {
-                Console.WriteLine("wow");
-            }
-            else
-            {
+            if (KategoriInputValid()) { 
                 kategoriList.changeKategoriNamn(kategoriNamnOld, kategoriNamnNew);
                 tbKategori.Clear();
             }
-        }
+        } 
 
         private void btnTaBortKategori_Click(object sender, EventArgs e)
         {
@@ -178,20 +156,23 @@ namespace Podcast
                 lbAvsnitt.Items.Add(item.Titel.ToString());
             }
         }
-
+            
         private void btnNyFeed_Click(object sender, EventArgs e)
         {
             var Url = tbUrl.Text;
-            var Frekvens = int.Parse(cbFrekvens.SelectedItem.ToString()); 
-            string Kategori = cbKategori.SelectedItem.ToString();
-            Feed feed = new Feed(Frekvens, Url, Kategori);
+            feedList.UrlExistInList(Url);
+            if (FeedInputValid()&&!feedList.UrlExistInList(Url)) {
+                var Frekvens = int.Parse(cbFrekvens.SelectedItem.ToString());
+                string Kategori = cbKategori.SelectedItem.ToString();
+                Feed feed = new Feed(Frekvens, Url, Kategori);
             
-            feed.GetFeedInfo();
-            feed.List = feed.GetAvsnitts();
-            feed.saveAvsnitt();
+                feed.GetFeedInfo();
+                feed.List = feed.GetAvsnitts();
+                feed.saveAvsnitt();
 
-            feedList.Add(feed);
-            tbUrl.Clear();
+                feedList.Add(feed);
+                tbUrl.Clear();
+            }
         }
 
         public void HandleKategoriChange()
@@ -230,22 +211,29 @@ namespace Podcast
                 var feedTitle = lvFeed.FocusedItem.SubItems[1].Text;
                 feedList.deleteByTitel(feedTitle);
         }
-        
 
         private void btnSparaFeed_Click(object sender, EventArgs e)
         {
+            if (Validater.DropDownBoxIsSelected(cbFrekvens)
+                   && Validater.DropDownBoxIsSelected(cbKategori)) { 
+                var feedTitle = lvFeed.FocusedItem.SubItems[1].Text;
+                var nyFrekvens = int.Parse(cbFrekvens.SelectedItem.ToString());
+                string nyKategori = cbKategori.SelectedItem.ToString();
+                feedList.changeFeed(feedTitle, nyKategori, nyFrekvens);
+            }
+        }
 
-            var feedTitle = lvFeed.FocusedItem.SubItems[1].Text;
-   
+        private bool KategoriInputValid()
+        {
+            return Validater.IsPresent(tbKategori);
+        }
 
-            var nyFrekvens = int.Parse(cbFrekvens.SelectedItem.ToString());
-            string nyKategori = cbKategori.SelectedItem.ToString();
-
-            feedList.changeFeed(feedTitle, nyKategori, nyFrekvens);
-
-
-           
-
+        private bool FeedInputValid()
+        {
+            return Validater.IsPresent(tbUrl)
+                   && Validater.IsValidRss(tbUrl.Text)
+                   && Validater.DropDownBoxIsSelected(cbFrekvens)
+                   && Validater.DropDownBoxIsSelected(cbKategori);
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Podcast.Logic
 {
@@ -65,6 +66,20 @@ namespace Podcast.Logic
             {
                 FeedChanged();
             }
+        }
+
+        public bool UrlExistInList(string url)
+        {
+            var feed = List.FirstOrDefault(i => i.Url == url);
+            if(feed != null)
+            {
+                MessageBox.Show("RSS URL finns redan i listan. Du kan ändra det genom att klicka det i listan, göra ändringar och klicka på knappen Ändra");
+                return true;
+            } else
+            {
+                return false;
+            }
+
         }
     }
 }
