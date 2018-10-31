@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feeds>
+   <Feed>
+      <Titel>Mordpodden</Titel>
+      <Url>https://mordpodden.com/feed/</Url>
+      <AntalAvsnitt>10</AntalAvsnitt>
+      <Frekvens>10</Frekvens>
+      <Kategori>Drama</Kategori>
+   </Feed>
+</Feeds>

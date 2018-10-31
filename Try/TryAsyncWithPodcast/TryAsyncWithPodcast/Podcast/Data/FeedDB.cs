@@ -29,12 +29,18 @@ namespace Podcast.Data
         public static void GetFeedInfo(Feed feed)
         {
             var Url = feed.Url;
-            using (XmlReader reader = XmlReader.Create(Url))
-            {
-                SyndicationFeed rssFeed = SyndicationFeed.Load(reader);
-                feed.AntalAvsnitt = rssFeed.Items.Count();
-                feed.Titel = rssFeed.Title.Text.ToString();
-            };
+
+            Task.Factory.StartNew(() => {
+                using(XmlReader reader = XmlReader.Create(Url, new XmlReaderSettings() { Async = true }))
+                {
+                    SyndicationFeed rssFeed = SyndicationFeed.Load(reader);
+                    Action bindData = () => {
+                        feed.AntalAvsnitt = rssFeed.Items.Count();
+                        feed.Titel = rssFeed.Title.Text.ToString();
+                    };
+                    Dispatcher.InvokeAsync(bindData);
+                }
+            });    
         }
 
         public static List<Avsnitt> GetAvsnitts(string Url)
